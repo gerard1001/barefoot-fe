@@ -1,0 +1,43 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:16.14.0
+
+    steps:
+      - checkout
+      - run:
+          name: 'Install dependencies'
+          command: 'yarn install'
+      - run:
+          name: Install Test Reporter
+          command: |
+            wget -O ./cc-test-reporter https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Report Before Build
+          command: ./cc-test-reporter before-build
+
+      - run:
+          name: 'run test'
+          command: 'yarn test'
+
+      - run:
+          name: 'coverage'
+          command: 'yarn coverage'
+
+      - run:
+          name: Send coverage report to Code Climate
+          command: ./cc-test-reporter after-build -t lcov
+
+      - store_artifacts:
+          path: test-results
+
+      - store_artifacts:
+          path: coverage
+
+workflows:
+  cabal-bn-fe-workflow:
+    jobs:
+      - build

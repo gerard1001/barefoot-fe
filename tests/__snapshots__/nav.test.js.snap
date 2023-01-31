@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should render the menubar on click 1`] = `
+<header
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1y6ewmh-MuiPaper-root-MuiAppBar-root"
+>
+  <div
+    className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-12bp6ck-MuiToolbar-root"
+  >
+    <a
+      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-19anirh-MuiTypography-root-MuiLink-root"
+      href="/"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <img
+        alt="Logo"
+        src="Logo.svg"
+        style={
+          Object {
+            "height": 50,
+            "width": 100,
+          }
+        }
+      />
+    </a>
+    <div
+      className="MuiBox-root css-9np8v5"
+    />
+    <div
+      className="MuiBox-root css-1m04nb5"
+      onClick={[Function]}
+    >
+      <img
+        alt="menu bar"
+        src="MenuBar.svg"
+      />
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Navbar should render the menubar on click 2`] = `
+<header
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1y6ewmh-MuiPaper-root-MuiAppBar-root"
+>
+  <div
+    className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-12bp6ck-MuiToolbar-root"
+  >
+    <a
+      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-19anirh-MuiTypography-root-MuiLink-root"
+      href="/"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <img
+        alt="Logo"
+        src="Logo.svg"
+        style={
+          Object {
+            "height": 50,
+            "width": 100,
+          }
+        }
+      />
+    </a>
+    <div
+      className="MuiBox-root css-9np8v5"
+    />
+    <div
+      className="MuiBox-root css-1m04nb5"
+      onClick={[Function]}
+    >
+      <img
+        alt="menu bar"
+        src="MenuBar.svg"
+      />
+    </div>
+  </div>
+</header>
+`;
