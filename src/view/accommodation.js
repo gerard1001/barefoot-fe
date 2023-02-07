@@ -37,6 +37,8 @@ export const AccommodationCard = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const dispatch = useDispatch();
 
+  console.log(accommodationState, 'accommodationState');
+
   const handleOpen = (data) => {
     setOpen(true);
     setData(data);
