@@ -3,7 +3,9 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL || 'http://localhost:5050/api/v1/',
+  baseURL:
+    process.env.REACT_APP_BACKEND_URL ||
+    'https://barefoot-backend.onrender.com/api/v1/',
   // baseURL: 'https://barefoot-backend-development.herokuapp.com/api/v1',
 });
 
