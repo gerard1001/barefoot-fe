@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL,
+  baseURL: process.env.REACT_APP_BACKEND_URL || 'http://localhost:5050/api/v1/',
   // baseURL: 'https://barefoot-backend-development.herokuapp.com/api/v1',
 });
 
@@ -11,8 +11,9 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (request) => {
     // Do something before request is sent
-    request.headers.authorization = `${'Bearer' + ' '}${JSON.parse(localStorage.getItem('userCredentials'))?.token
-      }`;
+    request.headers.authorization = `${'Bearer' + ' '}${
+      JSON.parse(localStorage.getItem('userCredentials'))?.token
+    }`;
     return request;
   },
   (error) =>
