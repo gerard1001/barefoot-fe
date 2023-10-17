@@ -75,7 +75,9 @@ const BookingPage = () => {
     error: accommodationError,
     pending: accommodationPending,
   } = useSelector((state) => state.fetchAllAccommodations);
-
+  console.log('====================================');
+  console.log(rooms);
+  console.log('====================================');
   const role =
     JSON.parse(localStorage.getItem('userCredentials')) ?? unloggedInUser;
   // get all rooms in the accommodations
@@ -139,12 +141,7 @@ const BookingPage = () => {
             spacing={{ xs: '5px', md: '15px' }}
             marginBottom="15px"
           >
-            <SelectFormControl
-              size={{
-                xs: 'small',
-                md: 'medium',
-              }}
-            >
+            <SelectFormControl>
               <InputLabel id="searchAccommodation">
                 Search Accommodation
               </InputLabel>
@@ -201,9 +198,9 @@ const BookingPage = () => {
                       return prevAcc;
                     },
                     [
-                      // <MenuItem key={0} value="All">
-                      //   All
-                      // </MenuItem>,
+                      <MenuItem key={0} value="All">
+                        All
+                      </MenuItem>,
                     ],
                   );
                 })()}

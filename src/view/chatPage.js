@@ -64,7 +64,7 @@ const ChatPage = () => {
   const [userLeaving, setUserLeaving] = useState([]);
   const socket = useContext(socketContext);
   const messagesEndRef = useRef(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const scrollToBottom = () => {
     messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
   };
